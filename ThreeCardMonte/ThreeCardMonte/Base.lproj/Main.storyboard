@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,134 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ThreeCardMonte" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bab-eo-PVB">
+                                <rect key="frame" x="157" y="314" width="101" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="cardBackRed"/>
+                                <connections>
+                                    <action selector="fivecardgame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u0U-Cl-bdv"/>
+                                    <action selector="flipACrd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s2u-2c-mki"/>
+                                    <action selector="fourCardGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lEI-dG-RS5"/>
+                                    <action selector="restartFuntcion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PtL-DX-xtb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puD-bx-hls">
+                                <rect key="frame" x="293" y="314" width="101" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="cardBackRed"/>
+                                <connections>
+                                    <action selector="fivecardgame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ea-pv-APe"/>
+                                    <action selector="flipACrd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yZO-Af-lcr"/>
+                                    <action selector="fourCardGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5My-VW-JZj"/>
+                                    <action selector="restartFuntcion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GE7-As-qdY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJS-qO-Nno">
+                                <rect key="frame" x="20" y="314" width="101" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="cardBackRed"/>
+                                <connections>
+                                    <action selector="fivecardgame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wUT-s3-bm3"/>
+                                    <action selector="flipACrd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DUL-R8-qqm"/>
+                                    <action selector="fourCardGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eng-uC-Zjq"/>
+                                    <action selector="restartFuntcion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eLu-H5-Zfl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a card!☝🏼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSd-Li-4r2">
+                                <rect key="frame" x="133" y="479" width="148" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5e-uY-aJ5">
+                                <rect key="frame" x="135" y="718" width="148" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="RESTART">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="fourRestart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cuz-Ug-Dh1"/>
+                                    <action selector="restartCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t7F-MJ-ZMS"/>
+                                    <action selector="restartFuntcion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hj7-YN-mHq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3Y-8B-mYq">
+                                <rect key="frame" x="143" y="542" width="129" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoX-DS-emN">
+                                <rect key="frame" x="81" y="128" width="101" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="cardBackRed"/>
+                                <connections>
+                                    <action selector="fivecardgame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e66-Jk-AIV"/>
+                                    <action selector="fourCardGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nD5-vj-CyV"/>
+                                    <action selector="restartFuntcion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DuJ-Zn-km1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4i3-zs-2xV">
+                                <rect key="frame" x="232" y="128" width="101" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="cardBackRed"/>
+                                <connections>
+                                    <action selector="fivecardgame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Ht-ZQ-z2c"/>
+                                    <action selector="restartFuntcion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2F1-hL-B3p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbs-Fr-Vzb">
+                                <rect key="frame" x="143" y="594" width="129" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Four card game">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="fourCardGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fwv-lL-iPB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nL5-ul-NrD">
+                                <rect key="frame" x="143" y="656" width="138" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Five card game">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="fivecardgame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SVb-E1-4mg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13635977193197604" green="0.48577153497409331" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="FiveCards" destination="nL5-ul-NrD" id="Kt8-MY-lCo"/>
+                        <outlet property="Label" destination="DSd-Li-4r2" id="RMC-NY-hQL"/>
+                        <outlet property="card1" destination="yJS-qO-Nno" id="fJJ-Nx-DLq"/>
+                        <outlet property="card2" destination="bab-eo-PVB" id="q8m-LP-HSU"/>
+                        <outlet property="card3" destination="puD-bx-hls" id="RSx-Ln-iAW"/>
+                        <outlet property="card4" destination="eoX-DS-emN" id="wP3-vr-f7J"/>
+                        <outlet property="card5" destination="4i3-zs-2xV" id="zON-aA-g7M"/>
+                        <outlet property="fourCards" destination="Rbs-Fr-Vzb" id="0Fm-Jo-O45"/>
+                        <outlet property="restart" destination="r5e-uY-aJ5" id="kk7-Eg-WuZ"/>
+                        <outlet property="winsAndLoses" destination="l3Y-8B-mYq" id="vBU-F6-zbs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139.13043478260872" y="132.58928571428572"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cardBackRed" width="164.63999938964844" height="234.24000549316406"/>
+    </resources>
 </document>
